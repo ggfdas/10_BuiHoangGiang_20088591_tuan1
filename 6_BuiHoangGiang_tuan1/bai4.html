@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Dữ liệu thử nghiệm
+        const bill1 = 275;
+        const bill2 = 40;
+        const bill3 = 430;
+
+        // Tính tiền boa sử dụng toán tử ba ngôi
+        const tip1 = bill1 >= 50 && bill1 <= 300 ? bill1 * 0.15 : bill1 * 0.2;
+        const tip2 = bill2 >= 50 && bill2 <= 300 ? bill2 * 0.15 : bill2 * 0.2;
+        const tip3 = bill3 >= 50 && bill3 <= 300 ? bill3 * 0.15 : bill3 * 0.2;
+
+        // Tính tổng giá trị (hóa đơn + tiền boa)
+        const total1 = bill1 + tip1;
+        const total2 = bill2 + tip2;
+        const total3 = bill3 + tip3;
+
+        // In kết quả ra bảng điều khiển
+        console.log('Hóa đơn là ', bill1, 'tiền boa là' ,tip1, 'và tổng giá trị là',total1);
+        console.log('Hóa đơn là ', bill2, 'tiền boa là' ,tip2, 'và tổng giá trị là',total2);
+        console.log('Hóa đơn là ', bill3, 'tiền boa là' ,tip3, 'và tổng giá trị là',total3);
+
+    </script>
+</body>
+</html>

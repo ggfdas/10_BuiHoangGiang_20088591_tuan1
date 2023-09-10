@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Hàm tính tiền boa
+    const calcTip = (bill) => {
+        return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+    };
+
+    // 1. Tạo một mảng 'bills' chứa 10 giá trị hóa đơn kiểm tra
+    const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+    // 2. Tạo mảng rỗng để lưu trữ tiền boa và tổng ('tips' và 'totals')
+    const tips = [];
+    const totals = [];
+
+    // 3. Sử dụng vòng lặp for để tính tiền boa và tổng cho từng giá trị hóa đơn
+    for (let i = 0; i < bills.length; i++) {
+        const tip = calcTip(bills[i]);
+            tips.push(tip);
+            totals.push(bills[i] + tip);
+        }
+
+    // 4. Bonus: Viết một hàm 'calcAverage' để tính giá trị trung bình của một mảng
+    const calcAverage = (arr) => {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum / arr.length;
+    };
+
+    // 4.3. Gọi hàm với mảng 'totals' để tính giá trị trung bình
+    const averageTotal = calcAverage(totals);
+
+    console.log('Các hóa đơn: ', bills);
+    console.log('Tiền boa:', tips);
+    console.log('Tổng cộng:', totals);
+    console.log('Giá trị trung bình của Tổng cộng:', averageTotal);
+
+    </script>
+</body>
+</html>

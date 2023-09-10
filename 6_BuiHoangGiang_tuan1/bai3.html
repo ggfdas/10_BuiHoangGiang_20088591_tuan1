@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Hàm tính điểm trung bình
+        function tinhDiemTrungBinh(diem) {
+            let tongDiem = 0;
+            for (let i = 0; i < diem.length; i++) {
+                tongDiem += diem[i];
+            }
+        return tongDiem / diem.length;
+        }
+
+        // Dữ liệu 1
+        const diemDolphins1 = [96, 108, 89];
+        const diemKoalas1 = [88, 91, 110];
+
+        // Dữ liệu Thưởng 1
+        const diemDolphinsBonus1 = [97, 112, 101];
+        const diemKoalasBonus1 = [109, 95, 123];
+
+        // Dữ liệu Thưởng 2
+        const diemDolphinsBonus2 = [97, 112, 101];
+        const diemKoalasBonus2 = [109, 95, 106];
+
+        // Hàm kiểm tra người chiến thắng
+        function kiemTraNguoiChienThang(dolphins, koalas) {
+            if (dolphins >= 100 && dolphins > koalas) {
+                return 'Cá heo chiến thắng!';
+            } else if (koalas >= 100 && koalas > dolphins) {
+                return 'Gấu túi chiến thắng!';
+            } else if (dolphins === koalas && dolphins >= 100 && koalas >= 100) {
+                return 'Hòa!';
+            } else {
+                return 'Không có đội nào giành được cúp!';
+            }
+        }
+
+        console.log('Điểm trung bình Dolphins1: ' , tinhDiemTrungBinh(diemDolphins1));
+        console.log('Điểm trung bình Koalas1: ' , tinhDiemTrungBinh(diemKoalas1));
+        console.log('Dữ liệu 1: ' , kiemTraNguoiChienThang(tinhDiemTrungBinh(diemDolphins1), tinhDiemTrungBinh(diemKoalas1)));
+        console.log('Điểm trung bình DolphinsBonus1: ' , tinhDiemTrungBinh(diemDolphinsBonus1));
+        console.log('Điểm trung bình KoalasBonus1: ' , tinhDiemTrungBinh(diemKoalasBonus1));
+        console.log('Dữ liệu Thưởng 1: ' , kiemTraNguoiChienThang(tinhDiemTrungBinh(diemDolphinsBonus1), tinhDiemTrungBinh(diemKoalasBonus1)));
+        console.log('Điểm trung bình DolphinsBonus2: ' , tinhDiemTrungBinh(diemDolphinsBonus2));
+        console.log('Điểm trung bình KoalasBonus2: ' , tinhDiemTrungBinh(diemKoalasBonus2));
+        console.log('Dữ liệu Thưởng 2: ' , kiemTraNguoiChienThang(tinhDiemTrungBinh(diemDolphinsBonus2), tinhDiemTrungBinh(diemKoalasBonus2)));       
+    </script>
+</body>
+</html>

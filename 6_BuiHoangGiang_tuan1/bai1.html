@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // dữ liệu 1
+        const Marksweights = 78;
+        const Markstall = 1.69;
+
+        const Johnweights = 92;
+        const Johntall = 1.95;
+
+        const MarksBMI = Marksweights / (Markstall ** 2)
+        const JohnBMI = Johnweights / (Johntall ** 2)
+
+        const markHigherBMI = MarksBMI > JohnBMI;
+
+        console.log("Mark có BMI lớn hơn John:", markHigherBMI);
+
+        // dữ liệu 2
+        const Marksweights1 = 95;
+        const Markstall1 = 1.88;
+
+        const Johnweights1 = 85;
+        const Johntall1 = 1.76;
+
+        const MarksBMI1 = Marksweights1 / (Markstall1 ** 2)
+        const JohnBMI1 = Johnweights1 / (Johntall1 ** 2)
+
+        const markHigherBMI1 = MarksBMI1 > JohnBMI1;
+
+        console.log("Mark có BMI lớn hơn John:", markHigherBMI1);   
+
+    </script>
+</body>
+</html>

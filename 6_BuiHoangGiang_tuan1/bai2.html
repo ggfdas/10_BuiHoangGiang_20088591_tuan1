@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // dữ liệu 1
+        const Marksweights = 78;
+        const Markstall = 1.69;
+
+        const Johnweights = 92;
+        const Johntall = 1.95;
+
+        const MarksBMI = Marksweights / (Markstall ** 2)
+        const JohnBMI = Johnweights / (Johntall ** 2)
+
+        const markHigherBMI = new Boolean(true);
+
+        console.log("markHigherBMI", markHigherBMI);
+
+        if (MarksBMI > JohnBMI) {
+            console.log(markHigherBMI);
+            console.log("MarksBMI", (MarksBMI), "cao hơn", "John BMI", (JohnBMI));
+        } else {
+            console.log("MarksBMI", (MarksBMI), "thấp hơn", "John BMI", (JohnBMI));
+        }
+
+        // dữ liệu 2
+        const Marksweights1 = 95;
+        const Markstall1 = 1.88;
+
+        const Johnweights1 = 85;
+        const Johntall1 = 1.76;
+
+        const MarksBMI1 = Marksweights1 / (Markstall1 ** 2)
+        const JohnBMI1 = Johnweights1 / (Johntall1 ** 2)
+
+        const markHigherBMI1 = new Boolean(true);
+
+        console.log("markHigherBMI1", markHigherBMI1);
+
+        if (MarksBMI1 > JohnBMI1) {
+            console.log(markHigherBMI1);
+            console.log("MarksBMI1", (MarksBMI1), "cao hơn", "John BMI1", (JohnBMI1));
+        } else {
+            console.log("MarksBMI1", (MarksBMI1), "thấp hơn", "John BMI1", (JohnBMI1));
+        }
+    </script>
+</body>
+</html>
